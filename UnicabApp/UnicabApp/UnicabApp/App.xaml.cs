@@ -11,7 +11,7 @@ namespace UnicabApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Landing.MainPage());
         }
 
         protected override void OnStart()
