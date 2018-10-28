@@ -17,7 +17,12 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Driver\" />
-    <Folder Include="Passenger\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Passenger\MainPagePassengerMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +36,15 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Landing\RegisterPassengerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Passenger\MainPagePassenger.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Passenger\MainPagePassengerDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Passenger\MainPagePassengerMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
