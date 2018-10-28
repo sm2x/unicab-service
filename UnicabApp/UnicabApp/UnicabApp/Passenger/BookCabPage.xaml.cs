@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Landing
+namespace UnicabApp.Passenger
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterPassengerPage : ContentPage
+	public partial class BookCabPage : ContentPage
 	{
-		public RegisterPassengerPage ()
+		public BookCabPage ()
 		{
 			InitializeComponent ();
 		}

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Landing
+namespace UnicabApp.Driver
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ForgotPasswordPage : ContentPage
+	public partial class OfferCarpoolPage : ContentPage
 	{
-		public ForgotPasswordPage ()
+		public OfferCarpoolPage ()
 		{
 			InitializeComponent ();
 		}

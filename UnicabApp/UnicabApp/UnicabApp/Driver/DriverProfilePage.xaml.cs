@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Landing
+namespace UnicabApp.Driver
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterDriverPage : ContentPage
+	public partial class DriverProfilePage : ContentPage
 	{
-		public RegisterDriverPage ()
+		public DriverProfilePage ()
 		{
 			InitializeComponent ();
 		}

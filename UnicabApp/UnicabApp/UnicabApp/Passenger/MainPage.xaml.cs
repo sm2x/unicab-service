@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Passenger
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPagePassenger : MasterDetailPage
+    public partial class MainPage : MasterDetailPage
     {
-        public MainPagePassenger()
+        public MainPage()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
@@ -20,7 +20,7 @@ namespace UnicabApp.Passenger
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MainPagePassengerMenuItem;
+            var item = e.SelectedItem as MainPageMenuItem;
             if (item == null)
                 return;
 

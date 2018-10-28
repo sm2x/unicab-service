@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UnicabApp.Landing.MainPage">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
-</TabbedPage>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Unicab Service!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="PassengerLoginBtn" Text="I am a passenger!" Clicked="PassengerLoginBtn_Clicked"/>
+            <Button x:Name="DriverLoginBtn" Text="I am a driver!" Clicked="DriverLoginBtn_Clicked" />
+            <Button x:Name="AboutBtn" Text="About me" Clicked="AboutBtn_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

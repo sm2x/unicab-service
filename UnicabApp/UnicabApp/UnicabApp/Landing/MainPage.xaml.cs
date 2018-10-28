@@ -9,12 +9,27 @@ using Xamarin.Forms.Xaml;
 
 namespace UnicabApp.Landing
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : TabbedPage
-    {
-        public MainPage ()
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class MainPage : ContentPage
+	{
+		public MainPage ()
+		{
+			InitializeComponent ();
+		}
+
+        private void PassengerLoginBtn_Clicked(object sender, EventArgs e)
         {
-            InitializeComponent();
+            App.Current.MainPage = new Passenger.MainPage();
+        }
+
+        private void DriverLoginBtn_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new Driver.MainPage();
+        }
+
+        private async void AboutBtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Common.AboutPage());
         }
     }
 }

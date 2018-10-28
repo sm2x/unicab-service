@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Passenger
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPagePassengerDetail : ContentPage
+    public partial class MainPageDetail : ContentPage
     {
-        public MainPagePassengerDetail()
+        public MainPageDetail()
         {
             InitializeComponent();
         }

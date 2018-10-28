@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnicabApp.Passenger.MainPagePassenger"
+             x:Class="UnicabApp.Passenger.MainPage"
              xmlns:pages="clr-namespace:UnicabApp.Passenger">
   <MasterDetailPage.Master>
-    <pages:MainPagePassengerMaster x:Name="MasterPage" />
+    <pages:MainPageMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <pages:MainPagePassengerDetail />
+        <pages:MainPageDetail />
       </x:Arguments>
     </NavigationPage>
   </MasterDetailPage.Detail>

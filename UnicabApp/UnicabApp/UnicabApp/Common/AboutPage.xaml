@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnicabApp.Common.AboutPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Unicab Service V.2" HorizontalOptions="Center" FontSize="Large" />
+
+            <Label Text="Made in &lt;code&gt;, with &#10084; by Ng Kim Ho Lester" HorizontalOptions="Center" FontSize="Medium" />
+
+            <Button x:Name="DismissBtn" Text="Dismiss" Clicked="DismissBtn_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
