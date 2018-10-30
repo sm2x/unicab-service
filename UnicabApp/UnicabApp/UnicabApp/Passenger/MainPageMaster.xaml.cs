@@ -33,9 +33,9 @@ namespace UnicabApp.Passenger
             {
                 MenuItems = new ObservableCollection<MainPageMenuItem>(new[]
                 {
-                    new MainPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(MainPageDetail), IconSource = null },
-                    new MainPageMenuItem { Id = 1, Title = "Request Cab", TargetType = typeof(MainPageDetail), IconSource = null },
-                    new MainPageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(MainPageDetail), IconSource = null },
+                    new MainPageMenuItem { Id = 0, Title = "Home", TargetType = typeof(PassengerDashboardPage), IconSource = null },
+                    new MainPageMenuItem { Id = 1, Title = "Request Cab", TargetType = typeof(BookCabPage), IconSource = null },
+                    new MainPageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(ViewCarpoolOffersListPage), IconSource = null },
                     new MainPageMenuItem { Id = 3, Title = "History", TargetType = typeof(MainPageDetail), IconSource = null },
                     new MainPageMenuItem { Id = 4, Title = "Settings", TargetType = typeof(MainPageDetail), IconSource = null },
                     new MainPageMenuItem { Id = 5, Title = "Help", TargetType = typeof(MainPageDetail), IconSource = null },
