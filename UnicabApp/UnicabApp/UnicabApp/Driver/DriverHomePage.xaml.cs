@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Passenger
+namespace UnicabApp.Driver
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : MasterDetailPage
+    public partial class DriverHomePage : MasterDetailPage
     {
-        public MainPage()
+        public DriverHomePage()
         {
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
@@ -20,9 +20,14 @@ namespace UnicabApp.Passenger
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MainPageMenuItem;
+            DriverHomePageMenuItem item = e.SelectedItem as DriverHomePageMenuItem;
             if (item == null)
                 return;
+            else if (item.Id == 99)
+            {
+                App.Current.MainPage = new NavigationPage(new Landing.MainPage());
+                return;
+            }
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;

@@ -1,16 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnicabApp.Landing.MainPage">
+             x:Class="UnicabApp.Landing.MainPage"
+             Title="Unicab Service">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Unicab Service!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="20">
+                <Label Text="Welcome to Unicab Service!" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
 
-            <Button x:Name="PassengerLoginBtn" Text="I am a passenger!" Clicked="PassengerLoginBtn_Clicked"/>
-            <Button x:Name="DriverLoginBtn" Text="I am a driver!" Clicked="DriverLoginBtn_Clicked" />
-            <Button x:Name="AboutBtn" Text="About me" Clicked="AboutBtn_Clicked" />
-        </StackLayout>
+                <Label Text="Register as a Driver or Passenger here" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Button x:Name="RegisterBtn" Text="Register Here" BackgroundColor="Goldenrod" Clicked="RegisterBtn_Clicked" />
+
+                <Label Text="Or, login with your existing account" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Passenger" />
+                    <Switch x:Name="loginSwitch" />
+                    <Label Text="Driver" />
+                </StackLayout>
+                
+                <Label Text="USM e-mail addrress" />
+                <Entry x:Name="loginUsernameEntry" Placeholder="Enter email address here" PlaceholderColor="DimGray" />
+                
+                <Label Text="Password" />
+                <Entry x:Name="loginPasswordEntry" IsPassword="true" Placeholder="Enter password here" PlaceholderColor="DimGray" />
+                
+                <Button x:Name="LoginBtn" Text="Login" BackgroundColor="DarkGray" Clicked="LoginBtn_Clicked" />
+                <Button x:Name="ForgotPasswordBtn" Text="Forgot Password" BackgroundColor="DimGray" Clicked="ForgotPasswordBtn_Clicked" />
+                <Label x:Name="loginMessageLabel" />
+
+                <Button x:Name="AboutBtn" Text="About The App" Clicked="AboutBtn_Clicked" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

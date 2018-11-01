@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Passenger
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BookCabPage : ContentPage
+	public partial class CabBookingPage : ContentPage
 	{
-		public BookCabPage ()
+		public CabBookingPage ()
 		{
 			InitializeComponent ();
 		}

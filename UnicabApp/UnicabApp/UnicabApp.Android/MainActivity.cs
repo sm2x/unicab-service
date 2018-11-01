@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace UnicabApp.Droid
 {
@@ -15,6 +16,7 @@ namespace UnicabApp.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
         }
     }

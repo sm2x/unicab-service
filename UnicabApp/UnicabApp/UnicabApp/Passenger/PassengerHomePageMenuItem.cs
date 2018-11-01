@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnicabApp.Driver
+namespace UnicabApp.Passenger
 {
 
-    public class MainPageMenuItem
+    public class PassengerHomePageMenuItem
     {
-        public MainPageMenuItem()
+        public PassengerHomePageMenuItem()
         {
-            //TargetType = typeof(MainPageDetail);
+            //TargetType = typeof(PassengerHomePageDetail);
         }
         public int Id { get; set; }
         public string Title { get; set; }
 
         public Type TargetType { get; set; }
 
-        public string IconSource { get; set; }
+        public String IconSource { get; set; }
     }
 }

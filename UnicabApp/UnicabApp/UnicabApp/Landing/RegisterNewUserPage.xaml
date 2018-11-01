@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnicabApp.Landing.RegisterNewUserPage"
+             Title="Register New User">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="20" >
+
+                <Label Text="Register for a user account here" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+
+                <Label Text="USM e-mail address" />
+                <Entry x:Name="emailEntry" Keyboard="Email" />
+
+                <Label Text="Matrics No." />
+                <Entry x:Name="matricsnoEntry" Keyboard="Numeric" />
+
+                <Label Text="First name" />
+                <Entry x:Name="firstNameEntry" />
+
+                <Label Text="Last name" />
+                <Entry x:Name="lastNameEntry" />
+
+                <Label Text="Gender" />
+                <Picker x:Name="genderPicker" Title="State your gender">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Mobile Phone No." />
+                <Entry x:Name="phoneNo" Keyboard="Numeric" />
+
+                <Label Text="New password" />
+                <Entry x:Name="newPasswordEntry" IsPassword="True" />
+
+                <Label Text="New password, again" />
+                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" />
+
+                <Button x:Name="RegisterButton" Text="Submit" WidthRequest="300" Clicked="RegisterButton_Clicked" />
+                <Button x:Name="CancelButton" Text="Cancel" WidthRequest="300" Clicked="CancelButton_Clicked" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
