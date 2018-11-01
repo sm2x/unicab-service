@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Driver
+namespace UnicabApp.Passenger
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class OfferCarpoolPage : ContentPage
+	public partial class CabBookingPassengerPage : ContentPage
 	{
-		public OfferCarpoolPage ()
+		public CabBookingPassengerPage ()
 		{
 			InitializeComponent ();
 		}

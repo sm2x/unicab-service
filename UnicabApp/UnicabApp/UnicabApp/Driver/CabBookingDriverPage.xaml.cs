@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace UnicabApp.Passenger
+namespace UnicabApp.Driver
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ViewCarpoolOffersListPage : ContentPage
+    public partial class CabBookingDriverPage : ContentPage
     {
         public ObservableCollection<string> Items { get; set; }
 
-        public ViewCarpoolOffersListPage()
+        public CabBookingDriverPage()
         {
             InitializeComponent();
 

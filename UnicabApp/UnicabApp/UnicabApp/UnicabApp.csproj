@@ -28,10 +28,10 @@
     <EmbeddedResource Update="Driver\DriverProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Driver\OfferCarpoolPage.xaml">
+    <EmbeddedResource Update="Driver\CarpoolOffersDriverPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Driver\ViewCabRequestsListPage.xaml">
+    <EmbeddedResource Update="Driver\CabBookingDriverPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Common\AboutPage.xaml">
@@ -46,7 +46,7 @@
     <EmbeddedResource Update="Landing\RegisterNewUserPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\CabBookingPage.xaml">
+    <EmbeddedResource Update="Passenger\CabBookingPassengerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\PassengerDashboardPage.xaml">
@@ -61,7 +61,7 @@
     <EmbeddedResource Update="Passenger\PassengerProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\ViewCarpoolOffersListPage.xaml">
+    <EmbeddedResource Update="Passenger\CarpoolOffersPassengerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\ViewDriversListPage.xaml">
@@ -77,11 +77,20 @@
     <Compile Update="Driver\DriverHomePageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Passenger\CabBookingPage.xaml.cs">
-      <DependentUpon>CabBookingPage.xaml</DependentUpon>
+    <Compile Update="Driver\CabBookingDriverPage.xaml.cs">
+      <DependentUpon>CabBookingDriverPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Driver\CarpoolOffersDriverPage.xaml.cs">
+      <DependentUpon>CarpoolOffersDriverPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Passenger\CabBookingPassengerPage.xaml.cs">
+      <DependentUpon>CabBookingPassengerPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Passenger\PassengerHomePageMenuItem.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Passenger\CarpoolOffersPassengerPage.xaml.cs">
+      <DependentUpon>CarpoolOffersPassengerPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
