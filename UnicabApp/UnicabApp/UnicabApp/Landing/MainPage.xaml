@@ -8,26 +8,23 @@
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="20">
                 <Label Text="Welcome to Unicab Service!" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
 
-                <Label Text="Register as a Driver or Passenger here" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
-                <Button x:Name="RegisterBtn" Text="Register Here" BackgroundColor="Goldenrod" Clicked="RegisterBtn_Clicked" />
-
-                <Label Text="Or, login with your existing account" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Label Text="Login with your existing account here!" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
                 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Label Text="Passenger" />
-                    <Switch x:Name="loginSwitch" />
-                    <Label Text="Driver" />
+                    <Button x:Name="LoginPassengerBtn" CornerRadius="10" MinimumWidthRequest="250" Text="Passenger" Clicked="LoginPassengerBtn_Clicked" BackgroundColor="ForestGreen" />
+                    <Button x:Name="LoginDriverBtn" CornerRadius="10" MinimumWidthRequest="250" Text="Driver" Clicked="LoginDriverBtn_Clicked" BackgroundColor="DimGray" />
                 </StackLayout>
                 
-                <Label Text="USM e-mail addrress" />
-                <Entry x:Name="loginUsernameEntry" Placeholder="Enter email address here" PlaceholderColor="DimGray" />
+                <Entry x:Name="loginUsernameEntry" Placeholder="Enter USM email address here" PlaceholderColor="DimGray" />
                 
-                <Label Text="Password" />
                 <Entry x:Name="loginPasswordEntry" IsPassword="true" Placeholder="Enter password here" PlaceholderColor="DimGray" />
                 
                 <Button x:Name="LoginBtn" Text="Login" BackgroundColor="DarkGray" Clicked="LoginBtn_Clicked" />
                 <Button x:Name="ForgotPasswordBtn" Text="Forgot Password" BackgroundColor="DimGray" Clicked="ForgotPasswordBtn_Clicked" />
                 <Label x:Name="loginMessageLabel" />
+
+                <Label Text="Or, Sign Up as a Driver or Passenger here" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Button x:Name="RegisterBtn" Text="Sign Up" BackgroundColor="Goldenrod" Clicked="RegisterBtn_Clicked" />
 
                 <Button x:Name="AboutBtn" Text="About The App" Clicked="AboutBtn_Clicked" />
             </StackLayout>

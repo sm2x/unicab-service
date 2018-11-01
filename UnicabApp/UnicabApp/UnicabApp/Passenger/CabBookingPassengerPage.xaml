@@ -1,13 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="UnicabApp.Passenger.CabBookingPassengerPage"
              Title="Cab Booking">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Cab Booking Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="10">
+
+                <maps:Map WidthRequest="320" HeightRequest="200" x:Name="MyMap" IsShowingUser="True" MapType="Street" />
+
+                <Label Text="Pickup Location" />
+                <Entry x:Name="pickupEntry" Placeholder="Enter pickup location" PlaceholderColor="DimGray" />
+
+                <Label Text="Dropoff Location" />
+                <Entry x:Name="dropoffEntry" Placeholder="Enter dropoff location" PlaceholderColor="DimGray" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="5">
+
+                    <Label Text="Ride Date" VerticalOptions="Center" />
+                    <DatePicker x:Name="datePicker" MaximumDate="12/31/2018" MinimumDate="{x:Static system:DateTime.Today}" Format="d" VerticalOptions="Center" />
+
+                    <Label Text="Ride Time" VerticalOptions="Center" />
+                    <TimePicker x:Name="timePicker" Format="t" VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+
+                    <Switch x:Name="ladiesOnly" IsToggled="False" VerticalOptions="Center" />
+                    <Label Text="Ladies Only" VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <Label Text="Additional Notes" />
+                <Editor x:Name="rideNotes" />
+
+                <Button x:Name="bookRide" Text="Book Ride" HorizontalOptions="CenterAndExpand" WidthRequest="600" />
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

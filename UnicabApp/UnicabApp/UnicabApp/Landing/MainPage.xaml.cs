@@ -12,7 +12,9 @@ namespace UnicabApp.Landing
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPage : ContentPage
 	{
-		public MainPage ()
+        private bool loginAsDriver = false;
+
+        public MainPage ()
 		{
 			InitializeComponent ();
 		}
@@ -31,7 +33,7 @@ namespace UnicabApp.Landing
         // Validation required
         private void LoginBtn_Clicked(object sender, EventArgs e)
         {
-            var loginAsDriver = loginSwitch.IsToggled;
+            //var loginAsDriver = loginSwitch.IsToggled;
             if (loginAsDriver)
                 App.Current.MainPage = new Driver.DriverHomePage();
             else
@@ -41,6 +43,20 @@ namespace UnicabApp.Landing
         private async void ForgotPasswordBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new ForgotPasswordPage());
+        }
+
+        private void LoginPassengerBtn_Clicked(object sender, EventArgs e)
+        {
+            LoginPassengerBtn.BackgroundColor = Color.ForestGreen;
+            LoginDriverBtn.BackgroundColor = Color.DimGray;
+            loginAsDriver = false;
+        }
+
+        private void LoginDriverBtn_Clicked(object sender, EventArgs e)
+        {
+            LoginPassengerBtn.BackgroundColor = Color.DimGray;
+            LoginDriverBtn.BackgroundColor = Color.ForestGreen;
+            loginAsDriver = true;
         }
     }
 }
