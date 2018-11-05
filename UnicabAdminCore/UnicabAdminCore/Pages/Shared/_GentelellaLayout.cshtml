@@ -14,24 +14,26 @@
     <!-- NProgress -->
     <link href="~/lib/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
 
+    <link rel="icon" href="~/images/Icon-36.png" />
+
     @RenderSection("Stylesheets", required: false)
 
     <!-- Custom Theme Style -->
     <link href="~/lib/gentelella/build/css/custom.min.css" rel="stylesheet">
 </head>
-<body class="nav-md footer_fixed">
+<body class="nav-md">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Unicab Admin</span></a>
+                        <a class="site_title" asp-page="/Index"><img src="~/images/Icon-36.png" /> <span>Unicab Admin</span> </a>
                     </div>
                     <div class="clearfix"></div>
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="~/lib/gentelella/production/images/img.jpg" alt="..." class="img-circle profile_img">
+                            <img src="~/lib/gentelella/production/images/img.png" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -46,10 +48,10 @@
                             <h3>HOME</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-home"></i> Dashboard </a>
+                                    <a asp-page="/Index"><i class="fa fa-home"></i> Dashboard </a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-paragraph"></i> Reports </a>
+                                    <a asp-page="/Reports/Index"><i class="fa fa-paragraph"></i> Reports </a>
                                 </li>
                             </ul>
                         </div>
@@ -57,13 +59,10 @@
                             <h3>USERS</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-edit"></i> Manage Drivers </a>
+                                    <a asp-page="/DriverMgmt/Index"><i class="fa fa-edit"></i> Manage Drivers </a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-desktop"></i> Manage Passengers </a>
-                                </li>
-                                <li>
-                                    <a><i class="fa fa-table"></i> Manage Blacklist </a>
+                                    <a asp-page="/PassengerMgmt/Index"><i class="fa fa-desktop"></i> Manage Passengers </a>
                                 </li>
                             </ul>
                         </div>
@@ -71,18 +70,18 @@
                             <h3>COMMUNICATION</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-bar-chart-o"></i> Push Notifications </a>
+                                    <a asp-page="/PushNotifications/Index"><i class="fa fa-bar-chart-o"></i> Push Notifications </a>
                                 </li>
                                 <li>
-                                    <a><i class="fa fa-envelope"></i> Messages </a>
+                                    <a asp-page="/Messages/Index"><i class="fa fa-envelope"></i> Messages </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="menu_section">
-                            <h3>GEOLOCATION</h3>
+                            <h3>LOCATION MANAGEMENT</h3>
                             <ul class="nav side-menu">
                                 <li>
-                                    <a><i class="fa fa-map-marker"></i> Stations / Places of Interest </a>
+                                    <a asp-page="/LocationMgmt/Index"><i class="fa fa-globe"></i> Stations / Places of Interest </a>
                                 </li>
                             </ul>
                         </div>
@@ -100,7 +99,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="~/lib/gentelella/production/images/img.jpg" alt="">Admin Lester
+                                    <img src="~/lib/gentelella/production/images/img.png" alt="">Admin Lester
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -139,9 +138,9 @@
     <!-- NProgress -->
     <script src="~/lib/gentelella/vendors/nprogress/nprogress.js"></script>
 
+    @RenderSection("Scripts", required: false)
+
     <!-- Custom Theme Scripts -->
     <script src="~/lib/gentelella/build/js/custom.min.js"></script>
-
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
