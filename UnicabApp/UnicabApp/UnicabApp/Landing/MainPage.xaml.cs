@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using UnicabApp.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,11 +34,21 @@ namespace UnicabApp.Landing
         // Validation required
         private void LoginBtn_Clicked(object sender, EventArgs e)
         {
+            DependencyService.Get<IToasts>().ShortToast("Logging in ...");
             //var loginAsDriver = loginSwitch.IsToggled;
             if (loginAsDriver)
+            {
                 App.Current.MainPage = new Driver.DriverHomePage();
+            }
             else
-                App.Current.MainPage = new Passenger.PassengerHomePage();
+            {
+                if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
+                {
+                    App.Current.MainPage = new Passenger.PassengerHomePage();
+                }
+                    
+            }
+                
         }
 
         private async void ForgotPasswordBtn_Clicked(object sender, EventArgs e)
