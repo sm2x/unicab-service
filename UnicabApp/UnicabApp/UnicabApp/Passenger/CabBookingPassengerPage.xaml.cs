@@ -25,6 +25,8 @@ namespace UnicabApp.Passenger
         {
             try
             {
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(5.357513, 100.305717), Distance.FromKilometers(2)));
+
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
                 var location = await Geolocation.GetLocationAsync(request);
 

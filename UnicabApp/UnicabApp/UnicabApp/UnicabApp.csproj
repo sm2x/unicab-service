@@ -71,10 +71,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Driver\DriverHomePageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
