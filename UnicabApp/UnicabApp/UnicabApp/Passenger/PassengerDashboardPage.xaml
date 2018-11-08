@@ -4,10 +4,13 @@
              x:Class="UnicabApp.Passenger.PassengerDashboardPage"
              Title="Home">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Passenger Dashboard Page"
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Passenger Dashboard Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>

@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <Win32Resource />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,15 +28,6 @@
     <EmbeddedResource Update="Driver\DriverHomePageMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Driver\DriverProfilePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Driver\CarpoolOffersDriverPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Driver\CabBookingDriverPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Common\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -45,9 +38,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Landing\RegisterNewUserPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\CabBookingPassengerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\PassengerDashboardPage.xaml">
@@ -62,10 +52,7 @@
     <EmbeddedResource Update="Passenger\PassengerProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\CarpoolOffersPassengerPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\ViewDriversListPage.xaml">
+    <EmbeddedResource Update="Passenger\RequestCabPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -74,20 +61,8 @@
     <Compile Update="Driver\DriverHomePageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Driver\CabBookingDriverPage.xaml.cs">
-      <DependentUpon>CabBookingDriverPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Driver\CarpoolOffersDriverPage.xaml.cs">
-      <DependentUpon>CarpoolOffersDriverPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Passenger\CabBookingPassengerPage.xaml.cs">
-      <DependentUpon>CabBookingPassengerPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Passenger\PassengerHomePageMenuItem.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Passenger\CarpoolOffersPassengerPage.xaml.cs">
-      <DependentUpon>CarpoolOffersPassengerPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

@@ -34,9 +34,9 @@ namespace UnicabApp.Driver
                 MenuItems = new ObservableCollection<DriverHomePageMenuItem>(new[]
                 {
                     new DriverHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(DriverDashboardPage) },
-                    new DriverHomePageMenuItem { Id = 1, Title = "Cab Bookings", TargetType = typeof(CabBookingDriverPage) },
-                    new DriverHomePageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(CarpoolOffersDriverPage) },
-                    new DriverHomePageMenuItem { Id = 3, Title = "Profile", TargetType = typeof(DriverProfilePage) },
+                    new DriverHomePageMenuItem { Id = 1, Title = "Cab Bookings", TargetType = typeof(DriverDashboardPage) },
+                    new DriverHomePageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(DriverDashboardPage) },
+                    new DriverHomePageMenuItem { Id = 3, Title = "Profile", TargetType = typeof(DriverDashboardPage) },
 
                     new DriverHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null },
                 });
