@@ -35,8 +35,7 @@ namespace UnicabApp.Passenger
                 {
                     new PassengerHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(PassengerDashboardPage) },
                     new PassengerHomePageMenuItem { Id = 1, Title = "Request Cab", TargetType = typeof(RequestCabPage) },
-                    new PassengerHomePageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(PassengerDashboardPage) },
-                    new PassengerHomePageMenuItem { Id = 3, Title = "Profile", TargetType = typeof(PassengerDashboardPage) },
+                    new PassengerHomePageMenuItem { Id = 2, Title = "My Carpool Offers", TargetType = typeof(PassengerDashboardPage) },
 
                     new PassengerHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null },
                 });
@@ -52,6 +51,14 @@ namespace UnicabApp.Passenger
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             #endregion
+
+        }
+
+        private void ProfileTapper_Tapped(object sender, EventArgs e)
+        {
+            PassengerHomePage PgrHomePage = (PassengerHomePage)App.Current.MainPage;
+            PgrHomePage.Detail = new NavigationPage(new PassengerProfilePage());
+            PgrHomePage.IsPresented = false;
         }
     }
 }

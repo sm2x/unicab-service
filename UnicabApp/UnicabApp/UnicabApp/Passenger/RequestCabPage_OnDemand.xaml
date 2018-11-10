@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnicabApp.Passenger.RequestCabPage_OnDemand">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Pick-up Location" />
+
+                <Label Text="Drop-off Location" />
+
+                <Label Text="Pick-up Schedule" />
+
+                <Label Text="No. of Passengers" />
+
+                <Label Text="Service Type" />
+
+                <Label Text="Ladies Only?" />
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

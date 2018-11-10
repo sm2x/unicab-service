@@ -34,9 +34,8 @@ namespace UnicabApp.Driver
                 MenuItems = new ObservableCollection<DriverHomePageMenuItem>(new[]
                 {
                     new DriverHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(DriverDashboardPage) },
-                    new DriverHomePageMenuItem { Id = 1, Title = "Cab Bookings", TargetType = typeof(DriverDashboardPage) },
-                    new DriverHomePageMenuItem { Id = 2, Title = "Carpool Offers", TargetType = typeof(DriverDashboardPage) },
-                    new DriverHomePageMenuItem { Id = 3, Title = "Profile", TargetType = typeof(DriverDashboardPage) },
+                    new DriverHomePageMenuItem { Id = 1, Title = "My Jobs", TargetType = typeof(DriverDashboardPage) },
+                    new DriverHomePageMenuItem { Id = 2, Title = "My Carpool Requests", TargetType = typeof(DriverDashboardPage) },
 
                     new DriverHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null },
                 });
@@ -52,6 +51,15 @@ namespace UnicabApp.Driver
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             #endregion
+
+        }
+
+        private void ProfileTapper_Tapped(object sender, EventArgs e)
+        {
+            DriverHomePage DvrHomePage = (DriverHomePage)App.Current.MainPage;
+            DvrHomePage.Detail = new NavigationPage(new DriverProfilePage());
+            DvrHomePage.IsPresented = false;
+
         }
     }
 }
