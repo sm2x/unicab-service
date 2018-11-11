@@ -35,7 +35,7 @@ namespace UnicabApp.Driver
                 {
                     new DriverHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(DriverDashboardPage) },
                     new DriverHomePageMenuItem { Id = 1, Title = "My Jobs", TargetType = typeof(DriverDashboardPage) },
-                    new DriverHomePageMenuItem { Id = 2, Title = "My Carpool Requests", TargetType = typeof(DriverDashboardPage) },
+                    new DriverHomePageMenuItem { Id = 2, Title = "Request Carpool", TargetType = typeof(DriverDashboardPage) },
 
                     new DriverHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null },
                 });

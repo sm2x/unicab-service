@@ -20,8 +20,7 @@ namespace UnicabApp.Driver
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            DriverHomePageMenuItem item = e.SelectedItem as DriverHomePageMenuItem;
-            if (item == null)
+            if (!(e.SelectedItem is DriverHomePageMenuItem item))
                 return;
             else if (item.Id == 99)
             {

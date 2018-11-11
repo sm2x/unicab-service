@@ -20,8 +20,7 @@ namespace UnicabApp.Passenger
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            PassengerHomePageMenuItem item = e.SelectedItem as PassengerHomePageMenuItem;
-            if (item == null)
+            if (!(e.SelectedItem is PassengerHomePageMenuItem item))
                 return;
             else if (item.Id == 99)
             {

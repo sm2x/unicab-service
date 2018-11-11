@@ -4,12 +4,54 @@
              x:Class="UnicabApp.Passenger.RequestCabPage_OnDemand">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Label Text="Pick-up Location" />
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
 
-                <Label Text="Drop-off Location" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="0,0,0,10">
+                    <Label Text="Pick-up Location" />
+                    <Picker x:Name="PickupPicker" Title="Select pick-up location">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>USM</x:String>
+                                <x:String>Outside</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
 
-                <Label Text="Pick-up Schedule" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="0,10,0,10">
+                    <Label Text="Drop-off Location" />
+                    <Picker x:Name="DropoffPicker" Title="Select drop-off location">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>USM</x:String>
+                                <x:String>Outside</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="0,10,0,10">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="Pick-up Schedule" />
+                        <DatePicker x:Name="PickupSchedule" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label Text="No. of Passengers" />
+                        <Picker x:Name="PassengerCount" Title="Select no. of passengers">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>4 persons or less</x:String>
+                                    <x:String>More than 4 persons</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
+                    
+                </StackLayout>
+
+
+                
 
                 <Label Text="No. of Passengers" />
 
