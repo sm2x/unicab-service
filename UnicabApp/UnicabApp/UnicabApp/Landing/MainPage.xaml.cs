@@ -34,17 +34,29 @@ namespace UnicabApp.Landing
         // Validation required
         private void LoginBtn_Clicked(object sender, EventArgs e)
         {
-            DependencyService.Get<IToasts>().ShortToast("Logging in ...");
             //var loginAsDriver = loginSwitch.IsToggled;
             if (loginAsDriver)
             {
-                App.Current.MainPage = new Driver.DriverHomePage();
+                if (loginUsernameEntry.Text == "dvr" && loginPasswordEntry.Text == "123")
+                {
+                    DependencyService.Get<IToasts>().ShortToast("Login success");
+                    App.Current.MainPage = new Driver.DriverHomePage();
+                }
+                else
+                {
+                    DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
+                }
             }
             else
             {
                 if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
                 {
+                    DependencyService.Get<IToasts>().ShortToast("Login success");
                     App.Current.MainPage = new Passenger.PassengerHomePage();
+                }
+                else
+                {
+                    DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
                 }
                     
             }

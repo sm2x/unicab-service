@@ -4,9 +4,9 @@
              x:Class="UnicabApp.Passenger.RequestCabPage_OnDemand">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="0,0,0,10">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="0,0,0,10">
                     <Label Text="Pick-up Location" />
                     <Picker x:Name="PickupPicker" Title="Select pick-up location">
                         <Picker.ItemsSource>
@@ -18,7 +18,7 @@
                     </Picker>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="0,10,0,10">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="0,10,0,10">
                     <Label Text="Drop-off Location" />
                     <Picker x:Name="DropoffPicker" Title="Select drop-off location">
                         <Picker.ItemsSource>
@@ -36,7 +36,7 @@
                         <DatePicker x:Name="PickupSchedule" />
                     </StackLayout>
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
                         <Label Text="No. of Passengers" />
                         <Picker x:Name="PassengerCount" Title="Select no. of passengers">
                             <Picker.ItemsSource>
@@ -47,18 +47,9 @@
                             </Picker.ItemsSource>
                         </Picker>
                     </StackLayout>
-                    
+
                 </StackLayout>
 
-
-                
-
-                <Label Text="No. of Passengers" />
-
-                <Label Text="Service Type" />
-
-                <Label Text="Ladies Only?" />
-                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
