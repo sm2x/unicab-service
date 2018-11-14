@@ -19,6 +19,7 @@ namespace UCAppServer
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("https://10.207.142.52:53940")
                 .UseStartup<Startup>();
     }
 }
