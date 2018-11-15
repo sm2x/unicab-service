@@ -7,6 +7,7 @@ namespace UCAppServer.Models
 {
     public class Passenger : User
     {
+
         public int TotalRides { get; set; }
 
         public int TotalCarpools { get; set; }

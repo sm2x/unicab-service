@@ -7,9 +7,10 @@ namespace UCAppServer.Models
 {
     public class Driver : User
     {
-        public int CarId { get; set; }
 
         public string LicenseDueDate { get; set; }
+
+        public byte[] LicenseFile { get; set; }
 
         public int TotalRides { get; set; }
 

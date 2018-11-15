@@ -22,15 +22,15 @@ namespace UCAppServer.Models
 
         public char Gender { get; set; }
 
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         public bool IsVerified { get; set; }
 
-        public string VerifiedDateTime { get; set; }
+        public DateTime VerifiedDateTime { get; set; }
 
         public bool IsBlacklisted { get; set; }
 
-        public string BlacklistedDateTime { get; set; }
+        public DateTime BlacklistedDateTime { get; set; }
 
         public string BlacklistedReason { get; set; }
 

@@ -7,5 +7,6 @@ namespace UCAppServer.Models
 {
     public class CabRequest
     {
+        public int CabRequestId { get; set; }
     }
 }
