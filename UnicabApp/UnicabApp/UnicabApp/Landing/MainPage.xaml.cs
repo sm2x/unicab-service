@@ -20,12 +20,6 @@ namespace UnicabApp.Landing
 			InitializeComponent ();
 		}
 
-        // On about button click
-        private async void AboutBtn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new Common.AboutPage());
-        }
-
         private async void RegisterBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new RegisterNewUserPage());

@@ -7,40 +7,27 @@
         <ScrollView>
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="20" >
 
-                <Label Text="Register for a user account here" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Label Text="Register New Account" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
 
-                <Label Text="USM e-mail address" />
-                <Entry x:Name="emailEntry" Keyboard="Email" />
+                <Picker x:Name="registrationTypePicker" Title="Select registration type" />
 
-                <Label Text="Matrics No." />
-                <Entry x:Name="matricsnoEntry" Keyboard="Numeric" />
+                <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" />
 
-                <Label Text="First name" />
-                <Entry x:Name="firstNameEntry" />
+                <Entry x:Name="matricsnoEntry" Placeholder="Matrics no." />
 
-                <Label Text="Last name" />
-                <Entry x:Name="lastNameEntry" />
+                <Entry x:Name="firstNameEntry" Placeholder="First name" />
 
-                <Label Text="Gender" />
-                <Picker x:Name="genderPicker" Title="State your gender">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Male</x:String>
-                            <x:String>Female</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <Entry x:Name="lastNameEntry" Placeholder="Last name" />
 
-                <Label Text="Mobile Phone No." />
-                <Entry x:Name="phoneNo" Keyboard="Numeric" />
+                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New password" />
 
-                <Label Text="New password" />
-                <Entry x:Name="newPasswordEntry" IsPassword="True" />
+                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter new password" />
 
-                <Label Text="New password, again" />
-                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" />
+                <Button x:Name="MatricsCardCaptureBtn" Text="Capture Matrics Card Photo" Clicked="MatricsCardCaptureBtn_Clicked" />
 
-                <Button x:Name="RegisterButton" Text="Submit" WidthRequest="300" Clicked="RegisterButton_Clicked" />
+                <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" />
+
+                <Button x:Name="SubmitButton" Text="Submit" WidthRequest="300" Clicked="SubmitButton_Clicked" />
                 <Button x:Name="CancelButton" Text="Cancel" WidthRequest="300" Clicked="CancelButton_Clicked" />
 
             </StackLayout>

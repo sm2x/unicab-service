@@ -15,9 +15,9 @@
                     <Button x:Name="LoginDriverBtn" CornerRadius="10" MinimumWidthRequest="250" Text="Driver" Clicked="LoginDriverBtn_Clicked" BackgroundColor="DimGray" />
                 </StackLayout>
                 
-                <Entry x:Name="loginUsernameEntry" Placeholder="Enter USM email address here" PlaceholderColor="DimGray" />
+                <Entry x:Name="loginUsernameEntry" Placeholder="USM email address" PlaceholderColor="DimGray" />
                 
-                <Entry x:Name="loginPasswordEntry" IsPassword="true" Placeholder="Enter password here" PlaceholderColor="DimGray" />
+                <Entry x:Name="loginPasswordEntry" IsPassword="true" Placeholder="Password" PlaceholderColor="DimGray" />
                 
                 <Button x:Name="LoginBtn" Text="Login" BackgroundColor="DarkGray" Clicked="LoginBtn_Clicked" />
                 <Button x:Name="ForgotPasswordBtn" Text="Forgot Password" BackgroundColor="DimGray" Clicked="ForgotPasswordBtn_Clicked" />
@@ -26,7 +26,7 @@
                 <Label Text="Or, Sign Up as a Driver or Passenger here" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
                 <Button x:Name="RegisterBtn" Text="Sign Up" BackgroundColor="Goldenrod" Clicked="RegisterBtn_Clicked" />
 
-                <Button x:Name="AboutBtn" Text="About The App" Clicked="AboutBtn_Clicked" />
+                <Label Text="(C) 2018 Unicab Service. Made in &lt;code&gt;, with &#10084; by Lester" HorizontalOptions="Center" FontSize="Micro" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
