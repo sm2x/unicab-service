@@ -8,6 +8,8 @@ namespace UCAppServer.Models
 {
     public class User
     {
+        // Profile data
+
         public int UserId { get; set; }
 
         public string FirstName { get; set; }
@@ -23,6 +25,8 @@ namespace UCAppServer.Models
         public char Gender { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        // Administrative details
 
         public bool IsVerified { get; set; }
 
