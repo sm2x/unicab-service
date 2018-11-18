@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Passenger
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RequestCabPage_DriversList : ContentPage
+    public partial class BrowseDriversPage : ContentPage
     {
         public ObservableCollection<string> Items { get; set; }
 
-        public RequestCabPage_DriversList()
+        public BrowseDriversPage()
         {
             InitializeComponent();
 

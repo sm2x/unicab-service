@@ -6,30 +6,51 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="20" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
 
-                <Label Text="Register New Account" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Label Text="Create New Passenger Account" FontSize="Large" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" />
 
-                <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" />
+                <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-                <Entry x:Name="matricsnoEntry" Placeholder="Matrics no." />
+                <Entry x:Name="matricsnoEntry" Placeholder="Matrics no." Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <Entry x:Name="firstNameEntry" Placeholder="First name" />
+                <Entry x:Name="firstNameEntry" Placeholder="First name" Grid.Row="5" Grid.Column="1" />
 
-                <Entry x:Name="lastNameEntry" Placeholder="Last name" />
+                <Entry x:Name="lastNameEntry" Placeholder="Last name" Grid.Row="5" Grid.Column="2" />
 
-                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New password" />
+                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New password" Grid.Row="6" Grid.Column="1" />
 
-                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter new password" />
+                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter password" Grid.Row="6" Grid.Column="2" />
 
-                <!--<Button x:Name="MatricsCardCaptureBtn" Text="Capture Matrics Card Photo" Clicked="MatricsCardCaptureBtn_Clicked" />-->
+                <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" HorizontalTextAlignment="Center" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" />
+                <Button x:Name="SubmitButton" Text="Submit" Clicked="SubmitButton_Clicked" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" />
+                <Button x:Name="CancelButton" Text="Cancel" Clicked="CancelButton_Clicked" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <Button x:Name="SubmitButton" Text="Submit" WidthRequest="300" Clicked="SubmitButton_Clicked" />
-                <Button x:Name="CancelButton" Text="Cancel" WidthRequest="300" Clicked="CancelButton_Clicked" />
-
-            </StackLayout>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

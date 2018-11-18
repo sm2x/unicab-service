@@ -27,15 +27,16 @@ namespace UnicabApp.Landing
         {
             // Login logic come here
 
-            if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
+            //if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
+            if (true)
             {
                 DependencyService.Get<IToasts>().ShortToast("Login success");
                 App.Current.MainPage = new Driver.DriverHomePage();
             }
-            else
-            {
-                DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
-            }
+            //else
+            //{
+            //    DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
+            //}
 
         }
 

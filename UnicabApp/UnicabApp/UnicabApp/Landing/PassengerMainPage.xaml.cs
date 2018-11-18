@@ -26,16 +26,17 @@ namespace UnicabApp.Landing
         private void LoginBtn_Clicked(object sender, EventArgs e)
         {
             // Login logic come here
-            
-            if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
+
+            //if (loginUsernameEntry.Text == "pgr" && loginPasswordEntry.Text == "123")
+            if (true)
             {
                 DependencyService.Get<IToasts>().ShortToast("Login success");
                 App.Current.MainPage = new Passenger.PassengerHomePage();
             }
-            else
-            {
-                DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
-            }
+            //else
+            //{
+            //    DependencyService.Get<IToasts>().ShortToast("Login failed, credentials incorrect");
+            //}
 
         }
 

@@ -37,7 +37,9 @@ namespace UnicabApp.Landing
                 MatricsNo = matricsnoEntry.Text,
                 FirstName = firstNameEntry.Text,
                 LastName = lastNameEntry.Text,
-                Password = newPasswordAgainEntry.Text
+                Password = newPasswordAgainEntry.Text,
+                CarPlateNo = carPlateNoEntry.Text,
+                RoadTaxDueDate = roadTaxDueDatePicker.Date
             };
 
             HttpStatusCode statusCode = await App.CredentialsManager.TryDriverSignUp(applicant);

@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace UnicabApp.Passenger
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RequestCabPage : TabbedPage
-    {
-        public RequestCabPage ()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class RequestCabPage : ContentPage
+	{
+		public RequestCabPage ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

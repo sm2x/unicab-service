@@ -1,38 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              x:Class="UnicabApp.Landing.RegisterNewDriverPage"
              Title="Register New Driver"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="20" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
 
-                <Label Text="Register New Driver Account" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
+                <Label Text="Create New Driver Account" FontSize="Large" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="Center" />
 
-                <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" />
+                <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-                <Entry x:Name="matricsnoEntry" Placeholder="Matrics no." />
+                <Entry x:Name="matricsnoEntry" Placeholder="Matrics no." Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Entry x:Name="firstNameEntry" Placeholder="First name" />
+                <Entry x:Name="firstNameEntry" Placeholder="First name" Grid.Row="5" Grid.Column="1" />
 
-                    <Entry x:Name="lastNameEntry" Placeholder="Last name" />
+                <Entry x:Name="lastNameEntry" Placeholder="Last name" Grid.Row="5" Grid.Column="2" />
 
-                </StackLayout>
+                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New password" Grid.Row="6" Grid.Column="1" />
 
-                <Entry x:Name="newPasswordEntry" IsPassword="True" Placeholder="New password" />
+                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter password" Grid.Row="6" Grid.Column="2" />
 
-                <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter new password" />
+                <Entry x:Name="carPlateNoEntry" Placeholder="Car Plate No" Grid.Row="7" Grid.Column="1" />
 
-                <!--<Button x:Name="MatricsCardCaptureBtn" Text="Capture Matrics Card Photo" Clicked="MatricsCardCaptureBtn_Clicked" />-->
+                <DatePicker x:Name="roadTaxDueDatePicker" MinimumDate="{x:Static system:DateTime.Today}" Format="d" Grid.Row="7" Grid.Column="2" />
 
-                <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" />
+                <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" HorizontalTextAlignment="Center" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <Button x:Name="SubmitButton" Text="Submit" WidthRequest="300" Clicked="SubmitButton_Clicked" />
-                <Button x:Name="CancelButton" Text="Cancel" WidthRequest="300" Clicked="CancelButton_Clicked" />
+                <Button x:Name="SubmitButton" Text="Submit" Clicked="SubmitButton_Clicked" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" />
+                <Button x:Name="CancelButton" Text="Cancel" Clicked="CancelButton_Clicked" Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" />
 
-            </StackLayout>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
