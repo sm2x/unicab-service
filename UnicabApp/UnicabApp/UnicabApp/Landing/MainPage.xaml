@@ -6,7 +6,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="20">
-                <Label Text="Welcome to Unicab Service!" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
 
                 <Label Text="Login with your existing account here!" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
                 
@@ -20,8 +19,7 @@
                 <Entry x:Name="loginPasswordEntry" IsPassword="true" Placeholder="Password" PlaceholderColor="DimGray" />
                 
                 <Button x:Name="LoginBtn" Text="Login" BackgroundColor="DarkGray" Clicked="LoginBtn_Clicked" />
-                <Button x:Name="ForgotPasswordBtn" Text="Forgot Password" BackgroundColor="DimGray" Clicked="ForgotPasswordBtn_Clicked" />
-                <Label x:Name="loginMessageLabel" />
+                <Label x:Name="ForgotPasswordLabel" Text="Forgot Your Password?" />
 
                 <Label Text="Or, Sign Up as a Driver or Passenger here" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
                 <Button x:Name="RegisterBtn" Text="Sign Up" BackgroundColor="Goldenrod" Clicked="RegisterBtn_Clicked" />

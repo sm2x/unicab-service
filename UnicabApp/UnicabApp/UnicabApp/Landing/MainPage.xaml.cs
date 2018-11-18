@@ -22,7 +22,7 @@ namespace UnicabApp.Landing
 
         private async void RegisterBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new RegisterNewUserPage());
+            await Navigation.PushModalAsync(new RegisterNewPassengerPage());
         }
 
         // Validation required

@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnicabApp.Landing.RegisterNewUserPage"
-             Title="Register New User">
+             x:Class="UnicabApp.Landing.RegisterNewPassengerPage"
+             Title="Register New Passenger">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="20" >
 
                 <Label Text="Register New Account" FontSize="Large" LineBreakMode="WordWrap" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,5,0,10" />
-
-                <Picker x:Name="registrationTypePicker" Title="Select registration type" />
 
                 <Entry x:Name="emailEntry" Keyboard="Email" Placeholder="USM e-mail address" />
 
@@ -23,7 +21,7 @@
 
                 <Entry x:Name="newPasswordAgainEntry" IsPassword="True" Placeholder="Reenter new password" />
 
-                <Button x:Name="MatricsCardCaptureBtn" Text="Capture Matrics Card Photo" Clicked="MatricsCardCaptureBtn_Clicked" />
+                <!--<Button x:Name="MatricsCardCaptureBtn" Text="Capture Matrics Card Photo" Clicked="MatricsCardCaptureBtn_Clicked" />-->
 
                 <Label Text="By registering and using this app, you hereby agree to the Unicab Service Terms and Conditions." FontSize="Micro" />
 
