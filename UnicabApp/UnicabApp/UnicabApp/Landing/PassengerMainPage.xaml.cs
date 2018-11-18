@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Landing
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NewMainPage : ContentPage
+	public partial class PassengerMainPage : ContentPage
 	{
-		public NewMainPage ()
+		public PassengerMainPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent ();
 		}
 
         private async void RegisterBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new RegisterNewPassengerPage());
+            await Navigation.PushAsync(new RegisterNewPassengerPage());
         }
 
         // Validation required
@@ -41,7 +41,12 @@ namespace UnicabApp.Landing
 
         private async void ForgotPasswordLabel_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ForgotPasswordPage());
+            await Navigation.PushAsync(new ForgotPassengerPasswordPage());
+        }
+
+        private void DriverInterfaceBtn_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new DriverMainPage());
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Landing
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ForgotPasswordPage : ContentPage
+	public partial class ForgotDriverPasswordPage : ContentPage
 	{
-		public ForgotPasswordPage ()
+		public ForgotDriverPasswordPage ()
 		{
 			InitializeComponent ();
 		}
@@ -24,7 +24,7 @@ namespace UnicabApp.Landing
 
         private async void CancelBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
         }
     }
 }

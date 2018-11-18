@@ -15,7 +15,7 @@ namespace UnicabApp.Services
 
         Task<HttpStatusCode> TryPassengerSignUp(PassengerApplicant applicant);
 
-        Task TryDriverSignUp(DriverApplicant applicant);
+        Task<HttpStatusCode> TryDriverSignUp(DriverApplicant applicant);
 
         Task TryRetrievePassword(string emailAddress);
 

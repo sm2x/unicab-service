@@ -16,7 +16,7 @@ namespace UnicabApp
 
             CredentialsManager = new CredentialsManager(new CredentialsService());
 
-            MainPage = new Landing.NewMainPage();
+            MainPage = new NavigationPage(new Landing.PassengerMainPage());
         }
 
         protected override void OnStart()

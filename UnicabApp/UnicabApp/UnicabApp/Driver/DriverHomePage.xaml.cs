@@ -24,7 +24,7 @@ namespace UnicabApp.Driver
                 return;
             else if (item.Id == 99)
             {
-                App.Current.MainPage = new Landing.MainPage();
+                App.Current.MainPage = new Landing.DriverMainPage();
                 return;
             }
 

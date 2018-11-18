@@ -33,13 +33,16 @@
     <EmbeddedResource Update="Driver\DriverProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Landing\ForgotPasswordPage.xaml">
+    <EmbeddedResource Update="Landing\DriverMainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Landing\MainPage.xaml">
+    <EmbeddedResource Update="Landing\ForgotDriverPasswordPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Landing\NewMainPage.xaml">
+    <EmbeddedResource Update="Landing\PassengerMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Landing\RegisterNewDriverPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Landing\RegisterNewPassengerPage.xaml">
@@ -71,6 +74,15 @@
   <ItemGroup>
     <Compile Update="Driver\DriverHomePageMenuItem.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Landing\ForgotPassengerPasswordPage.xaml.cs">
+      <DependentUpon>ForgotPassengerPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Landing\ForgotDriverPasswordPage.xaml.cs">
+      <DependentUpon>ForgotDriverPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Landing\PassengerMainPage.xaml.cs">
+      <DependentUpon>PassengerMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Landing\RegisterNewPassengerPage.xaml.cs">
       <DependentUpon>RegisterNewPassengerPage.xaml</DependentUpon>

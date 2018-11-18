@@ -16,7 +16,7 @@ namespace UnicabApp.Services
             credentialsService = service;
         }
 
-        public Task TryDriverSignUp(DriverApplicant applicant)
+        public Task<HttpStatusCode> TryDriverSignUp(DriverApplicant applicant)
         {
             return credentialsService.TryDriverSignUp(applicant);
         }

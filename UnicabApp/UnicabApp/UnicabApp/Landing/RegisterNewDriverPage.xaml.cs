@@ -1,27 +1,22 @@
-﻿using Plugin.Media;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using UnicabApp.Models;
-using UnicabApp.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace UnicabApp.Landing
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterNewPassengerPage : ContentPage
-	{
-		public RegisterNewPassengerPage ()
-		{
-			InitializeComponent ();
-
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RegisterNewDriverPage : ContentPage
+    {
+        public RegisterNewDriverPage()
+        {
+            InitializeComponent();
+        }
 
         private async void SubmitButton_Clicked(object sender, EventArgs e)
         {
@@ -36,7 +31,7 @@ namespace UnicabApp.Landing
             SubmitButton.Text = "Submitting ...";
             SubmitButton.IsEnabled = false;
 
-            PassengerApplicant applicant = new PassengerApplicant()
+            DriverApplicant applicant = new DriverApplicant()
             {
                 EmailAddress = emailEntry.Text,
                 MatricsNo = matricsnoEntry.Text,
@@ -45,15 +40,15 @@ namespace UnicabApp.Landing
                 Password = newPasswordAgainEntry.Text
             };
 
-            HttpStatusCode statusCode = await App.CredentialsManager.TryPassengerSignUp(applicant);
+            HttpStatusCode statusCode = await App.CredentialsManager.TryDriverSignUp(applicant);
 
             if (statusCode == HttpStatusCode.Created)
             {
-                await DisplayAlert("Passenger Sign Up", "Sign up successful. Kindly wait for admin approval before using the service. Thank you.", "OK");
+                await DisplayAlert("Driver Sign Up", "Sign up successful. Kindly wait for admin approval before using the service. Thank you.", "OK");
             }
             else
             {
-                await DisplayAlert("Passenger Sign Up", "Sign up failed. Please try again. (status code: " + statusCode.ToString() + ")", "OK");
+                await DisplayAlert("Driver Sign Up", "Sign up failed. Please try again. (status code: " + statusCode.ToString() + ")", "OK");
             }
 
             await Navigation.PopAsync();
