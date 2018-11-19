@@ -40,7 +40,7 @@ namespace UnicabApp.Passenger
             }
             else
             {
-                await DisplayAlert("Request Cab", "You have cancelled your cab request.", "OK");
+                await DisplayAlert("Request Cab", "You have not proceeded with your cab request.", "OK");
             }
         }
 
