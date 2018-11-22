@@ -10,14 +10,17 @@ namespace UnicabApp.Models
 
         public string DrivingTo { get; set; }
 
-        public DateTime DepartingDate { get; set; }
+        public DateTime DepartingDateTime { get; set; }
 
-        public TimeSpan DepartingTime { get; set; }
+        //public DateTime DepartingTime { get; set; }
 
         public int NoOfSeats { get; set; }
 
         public bool LadiesOnly { get; set; }
 
         public string AdditionalNotes { get; set; }
+        
+
+
     }
 }

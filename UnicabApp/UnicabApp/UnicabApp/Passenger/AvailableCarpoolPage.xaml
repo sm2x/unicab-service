@@ -2,32 +2,48 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UnicabApp.Passenger.AvailableCarpoolPage">
-  <ListView x:Name="MyListView"
+    <ListView x:Name="AvailableCarpoolListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-            
-    <!--Built in Cells-->
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <TextCell Text="{Binding .}" />
-        </DataTemplate>
-    </ListView.ItemTemplate>
-    
-    <!--Custom View Cells-->
-    <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
-  </ListView>
+            CachingStrategy="RecycleElement"
+              RowHeight="80">
+
+        <!--Built in Cells-->
+        <!--<ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell Text="{Binding DisplayDrivingPath}" Detail="{Binding DepartingDate}" ImageSource="car_icon.png" />
+            </DataTemplate>
+        </ListView.ItemTemplate>-->
+
+        <!--Custom View Cells-->
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="car_icon.png" WidthRequest="70" HeightRequest="70" />
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding DrivingFrom}" FontSize="Medium" />
+                                    <Label Text="&#8599;" FontSize="Medium"/>
+                                    <Label Text="{Binding DrivingTo}" FontSize="Medium" FontAttributes="Bold" TextColor="HotPink" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" BindingContext="{Binding DepartingDateTime}">
+                                    <Label Text="{Binding StringFormat='Date: {0:d}'}" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding StringFormat='Time: {0:t}'}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NoOfSeats, StringFormat='Seats Available: {0}'}" />
+                                </StackLayout>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 </ContentPage>
