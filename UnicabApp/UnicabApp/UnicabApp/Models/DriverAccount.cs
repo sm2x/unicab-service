@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnicabApp.Models
 {
-    public class Driver
+    public class DriverAccount
     {
         public string EmailAddress { get; set; }
 
@@ -27,5 +27,9 @@ namespace UnicabApp.Models
         public DateTime RoadTaxDueDate { get; set; }
 
         //public byte[] CarInsuranceGrantPhoto { get; set; }
+
+        public string CarMake { get; set; }
+
+        public string CarModel { get; set; }
     }
 }

@@ -2,32 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UnicabApp.Passenger.BrowseDriversPage">
-  <ListView x:Name="MyListView"
+  <ListView x:Name="BrowseDriversListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
+            CachingStrategy="RecycleElement"
+            RowHeight="80">
             
     <!--Built in Cells-->
-    <ListView.ItemTemplate>
+    <!--<ListView.ItemTemplate>
         <DataTemplate>
             <ImageCell Text="{Binding .}"  />
         </DataTemplate>
-    </ListView.ItemTemplate>
+    </ListView.ItemTemplate>-->
     
     <!--Custom View Cells-->
-    <!--
+    
     <ListView.ItemTemplate>
       <DataTemplate>
         <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="profile_blank.png" WidthRequest="70" HeightRequest="70" />
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold" />
+                                    <Label Text="{Binding LastName}" FontSize="Medium" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding CarMake}" />
+                                    <Label Text="|" />
+                                    <Label Text="{Binding CarModel}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding CarPlateNo}" />
+                                </StackLayout>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
       </DataTemplate>
     </ListView.ItemTemplate>
-    -->
+    
   </ListView>
 </ContentPage>

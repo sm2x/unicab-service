@@ -20,6 +20,7 @@ namespace UnicabApp.Passenger
         {
             InitializeComponent();
 
+            // Dummy data
             Items = new ObservableCollection<CarpoolOffer>
             {
                 new CarpoolOffer
@@ -83,20 +84,7 @@ namespace UnicabApp.Passenger
             if (e.Item == null)
                 return;
 
-            CarpoolOffer selectedOffer = (CarpoolOffer)e.Item;
-
-            //string offerTitle = string.Format("{0} > {1}", selectedOffer.DrivingFrom, selectedOffer.DrivingTo);
-            //string offerContent = string.Format("Driving From: {0}\nDriving To: {1}\nPickup Date: {2:D}\nPickup Time: {2:t}\nNo.of Seats: {3}\nLadies Only?: {4}\nAdditional Notes: {5}",
-            //    selectedOffer.DrivingFrom,
-            //    selectedOffer.DrivingTo,
-            //    selectedOffer.DepartingDateTime,
-            //    selectedOffer.NoOfSeats,
-            //    (selectedOffer.LadiesOnly) ? "Yes" : "No",
-            //    selectedOffer.AdditionalNotes);
-
-            //await DisplayAlert(offerTitle, offerContent, "OK");
-
-            await Navigation.PushAsync(new SelectedCarpoolPage(selectedOffer));
+            await Navigation.PushAsync(new SelectedCarpoolPage((CarpoolOffer)e.Item));
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
