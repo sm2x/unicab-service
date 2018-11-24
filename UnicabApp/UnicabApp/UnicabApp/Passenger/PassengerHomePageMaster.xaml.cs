@@ -34,13 +34,12 @@ namespace UnicabApp.Passenger
                 MenuItems = new ObservableCollection<PassengerHomePageMenuItem>(new[]
                 {
                     new PassengerHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(PassengerDashboardPage) },
-                    new PassengerHomePageMenuItem { Id = 1, Title = "Upcoming Rides", TargetType = typeof(UpcomingRidesPage) },
-                    new PassengerHomePageMenuItem { Id = 2, Title = "Request Cab", TargetType = typeof(RequestCabPage) },
-                    new PassengerHomePageMenuItem { Id = 3, Title = "Available Carpool", TargetType = typeof(AvailableCarpoolPage) },
-                    new PassengerHomePageMenuItem { Id = 4, Title = "Browse Drivers", TargetType = typeof(BrowseDriversPage) },
-                    new PassengerHomePageMenuItem { Id = 5, Title = "Ride History", TargetType = typeof(RideHistoryPage) },
+                    new PassengerHomePageMenuItem { Id = 1, Title = "Request Cab", TargetType = typeof(RequestCabPage) },
+                    new PassengerHomePageMenuItem { Id = 2, Title = "Available Carpool", TargetType = typeof(AvailableCarpoolPage) },
+                    new PassengerHomePageMenuItem { Id = 3, Title = "Browse Drivers", TargetType = typeof(BrowseDriversPage) },
+                    new PassengerHomePageMenuItem { Id = 4, Title = "History", TargetType = typeof(RideHistoryPage) },
 
-                    new PassengerHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null },
+                    new PassengerHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null }
                 });
             }
             

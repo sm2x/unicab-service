@@ -16,7 +16,7 @@ namespace UnicabApp.Passenger
 		{
 			InitializeComponent ();
 
-            this.Title = string.Format("{0} {1} {2}", upcomingRide.PickupLocation, char.ConvertFromUtf32(0x2197), upcomingRide.DropoffLocation);
+            //this.Title = string.Format("{0} {1} {2}", upcomingRide.PickupLocation, char.ConvertFromUtf32(0x2197), upcomingRide.DropoffLocation);
 
             StatusLabel.Text = "ON SCHEDULE";
             RideFromLabel.Text = upcomingRide.PickupLocation;
