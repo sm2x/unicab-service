@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -11,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace UnicabApp.Passenger
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class UpcomingRidesPage : ContentPage
+    public partial class RideHistoryPage : ContentPage
     {
         public ObservableCollection<UpcomingRide> Items { get; set; }
 
-        public UpcomingRidesPage()
+        public RideHistoryPage()
         {
             InitializeComponent();
 
@@ -73,12 +72,12 @@ namespace UnicabApp.Passenger
                 }
             };
 
-            UpcomingRidesListView.ItemsSource = Items;
+            RideHistoryListView.ItemsSource = Items;
 
-            if ((UpcomingRidesListView.ItemsSource as ObservableCollection<UpcomingRide>).Count == 0)
+            if ((RideHistoryListView.ItemsSource as ObservableCollection<UpcomingRide>).Count == 0)
             {
-                UpcomingRidesListView.IsVisible = false;
-                EmptyMessage.IsVisible = true;
+                RideHistoryListView.IsVisible = false;
+                //EmptyMessage.IsVisible = true;
 
             }
         }
@@ -88,7 +87,7 @@ namespace UnicabApp.Passenger
             if (e.Item == null)
                 return;
 
-            await Navigation.PushAsync(new SelectedUpcomingRidePage(e.Item as UpcomingRide));
+            await Navigation.PushAsync(new SelectedRideHistoryPage(e.Item as UpcomingRide));
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;

@@ -69,7 +69,7 @@
     <EmbeddedResource Update="Passenger\PassengerDashboardPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Passenger\PassengerHistoryPage.xaml">
+    <EmbeddedResource Update="Passenger\RideHistoryPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\PassengerHomePage.xaml">
@@ -88,6 +88,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\SelectedDriverPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Passenger\SelectedRideHistoryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Passenger\SelectedUpcomingRidePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Passenger\UpcomingRidesPage.xaml">
@@ -110,6 +116,9 @@
     </Compile>
     <Compile Update="Landing\RegisterNewPassengerPage.xaml.cs">
       <DependentUpon>RegisterNewPassengerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Passenger\RideHistoryPage.xaml.cs">
+      <DependentUpon>RideHistoryPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Passenger\PassengerHomePageMenuItem.cs">
       <SubType>Code</SubType>

@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnicabApp.Passenger.BrowseDriversPage">
-    <ListView x:Name="BrowseDriversListView"
+             x:Class="UnicabApp.Passenger.RideHistoryPage">
+    <ListView x:Name="RideHistoryListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement"
-            RowHeight="100">
+              RowHeight="100">
 
         <!--Built in Cells-->
         <!--<ListView.ItemTemplate>
         <DataTemplate>
-            <ImageCell Text="{Binding .}"  />
+            <TextCell Text="{Binding .}" />
         </DataTemplate>
     </ListView.ItemTemplate>-->
 
@@ -24,19 +24,21 @@
                         <Frame OutlineColor="Accent" Padding="5">
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                 <StackLayout Orientation="Horizontal">
-                                    <Image Source="profile_blank.png" WidthRequest="60" HeightRequest="60" />
+                                    <Image Source="carpool_icon.png" WidthRequest="60" HeightRequest="60" />
                                     <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                         <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold" />
-                                            <Label Text="{Binding LastName}" FontSize="Medium" />
+                                            <Label Text="{Binding PickupLocation}" FontSize="Medium" />
+                                            <Label Text="&#8599;" FontSize="Medium"/>
+                                            <Label Text="{Binding DropoffLocation}" FontSize="Medium" FontAttributes="Bold" TextColor="HotPink" />
                                         </StackLayout>
-                                        <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding CarMake}" />
+                                        <StackLayout Orientation="Horizontal" BindingContext="{Binding PickupDateTime}">
+                                            <Label Text="{Binding StringFormat='Date: {0:d}'}" />
                                             <Label Text="|" />
-                                            <Label Text="{Binding CarModel}" />
+                                            <Label Text="{Binding StringFormat='Time: {0:t}'}" />
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal">
-                                            <Label Text="{Binding CarPlateNo}" />
+                                            <Label Text="Status : " />
+                                            <Label Text="COMPLETED" FontAttributes="Bold" TextColor="DarkGreen" />
                                         </StackLayout>
                                     </StackLayout>
 

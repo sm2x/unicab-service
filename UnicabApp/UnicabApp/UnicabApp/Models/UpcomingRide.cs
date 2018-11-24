@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UnicabApp.Models
 {
-    public class CabRequest
+    public class UpcomingRide
     {
         public string PickupLocation { get; set; }
 
@@ -12,10 +12,11 @@ namespace UnicabApp.Models
 
         public DateTime PickupDateTime { get; set; }
 
-        public int NoOfPassengers { get; set; }
+        public int NoOfSeats { get; set; }
 
         public bool LadiesOnly { get; set; }
 
         public string AdditionalNotes { get; set; }
+        
     }
 }
