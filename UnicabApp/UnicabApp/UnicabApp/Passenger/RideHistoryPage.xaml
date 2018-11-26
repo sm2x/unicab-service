@@ -8,15 +8,6 @@
             CachingStrategy="RecycleElement"
               RowHeight="100">
 
-        <!--Built in Cells-->
-        <!--<ListView.ItemTemplate>
-        <DataTemplate>
-            <TextCell Text="{Binding .}" />
-        </DataTemplate>
-    </ListView.ItemTemplate>-->
-
-        <!--Custom View Cells-->
-
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

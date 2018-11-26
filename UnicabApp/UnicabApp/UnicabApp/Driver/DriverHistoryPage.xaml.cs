@@ -7,27 +7,81 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using UnicabApp.Models;
+
 namespace UnicabApp.Driver
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DriverHistoryPage : ContentPage
     {
-        public ObservableCollection<string> Items { get; set; }
+        public ObservableCollection<UpcomingRide> Items { get; set; }
 
         public DriverHistoryPage()
         {
             InitializeComponent();
 
-            Items = new ObservableCollection<string>
+            Items = new ObservableCollection<UpcomingRide>
             {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
+                new UpcomingRide
+                {
+                    PickupLocation = "USM",
+                    DropoffLocation = "KL",
+                    PickupDateTime = new DateTime(2018, 12, 1, 6, 0, 0),
+                    NoOfSeats = 4,
+                    LadiesOnly = false,
+                    AdditionalNotes = "Carrying two luggages"
+
+                },
+                new UpcomingRide
+                {
+                    PickupLocation = "KL",
+                    DropoffLocation = "USM",
+                    PickupDateTime = new DateTime(2018, 12, 6, 13, 30, 0),
+                    NoOfSeats = 4,
+                    LadiesOnly = false,
+                    AdditionalNotes = "Extra space for a luggage"
+
+                },
+                new UpcomingRide
+                {
+                    PickupLocation = "USM",
+                    DropoffLocation = "Ipoh",
+                    PickupDateTime = new DateTime(2018, 12, 9, 15, 10, 0),
+                    NoOfSeats = 2,
+                    LadiesOnly = false,
+                    AdditionalNotes = "Carrying musical instruments"
+
+                },
+                new UpcomingRide
+                {
+                    PickupLocation = "Kampar",
+                    DropoffLocation = "George Town",
+                    PickupDateTime = new DateTime(2018, 12, 12, 10, 0, 0),
+                    NoOfSeats = 4,
+                    LadiesOnly = false,
+                    AdditionalNotes = "Bring warm jacket"
+
+                },
+                new UpcomingRide
+                {
+                    PickupLocation = "USM",
+                    DropoffLocation = "KL",
+                    PickupDateTime = new DateTime(2018, 12, 23, 9, 30, 0),
+                    NoOfSeats = 4,
+                    LadiesOnly = false,
+                    AdditionalNotes = "Christmas trip"
+
+                }
             };
-			
-			MyListView.ItemsSource = Items;
+
+            DriverHistoryListView.ItemsSource = Items;
+
+            if ((DriverHistoryListView.ItemsSource as ObservableCollection<UpcomingRide>).Count == 0)
+            {
+                DriverHistoryListView.IsVisible = false;
+                //EmptyMessage.IsVisible = true;
+
+            }
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -35,7 +89,7 @@ namespace UnicabApp.Driver
             if (e.Item == null)
                 return;
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            await Navigation.PushAsync(new SelectedRideHistoryPage(e.Item as UpcomingRide));
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
