@@ -1,17 +1,49 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
+using System.Diagnostics;
+using System.Net.Http;
 using System.Threading.Tasks;
-using UnicabAdminCore;
+using UnicabAdminCore.Models;
 
 namespace UnicabAdminCore.Services
 {
     public class DriverManagementService : IDriverManagementService
     {
-        public Task GetDriverApplicantsList()
+        private readonly HttpClient client;
+
+        public List<DriverApplicant> DriverApplicantsList { get; private set;}
+
+        public DriverManagementService()
         {
-            throw new NotImplementedException();
+            client = new HttpClient
+            {
+                MaxResponseContentBufferSize = 256000
+            };
+        }
+
+        public async Task<List<DriverApplicant>> GetDriverApplicantsList()
+        {
+            DriverApplicantsList = new List<DriverApplicant>();
+
+            var uri = new Uri(string.Format(AppServerConstants.DriverApplicantsUrl, string.Empty));
+            
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    DriverApplicantsList = JsonConvert.DeserializeObject<List<DriverApplicant>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"ERROR: {0}", ex.Message);
+            }
+
+            return DriverApplicantsList;
+
         }
 
         public Task ViewDriverApplicant(int driverApplicantId)

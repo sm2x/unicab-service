@@ -4,12 +4,13 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using UnicabAdminCore;
+using UnicabAdminCore.Models;
 
 namespace UnicabAdminCore.Services
 {
     public interface IDriverManagementService
     {
-        Task GetDriverApplicantsList();
+        Task<List<DriverApplicant>> GetDriverApplicantsList();
 
         Task ViewDriverApplicant(int driverApplicantId);
 
