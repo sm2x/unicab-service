@@ -86,5 +86,19 @@ namespace UnicabApp.Passenger
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
         }
+
+        private void RequestCabFrameTapGesture_Tapped(object sender, EventArgs e)
+        {
+            PassengerHomePage PgrHomePage = (PassengerHomePage)App.Current.MainPage;
+            PgrHomePage.Detail = new NavigationPage(new RequestCabPage());
+            PgrHomePage.IsPresented = false;
+        }
+
+        private void AvailableCarpoolFrameTapGesture_Tapped(object sender, EventArgs e)
+        {
+            PassengerHomePage PgrHomePage = (PassengerHomePage)App.Current.MainPage;
+            PgrHomePage.Detail = new NavigationPage(new AvailableCarpoolPage());
+            PgrHomePage.IsPresented = false;
+        }
     }
 }

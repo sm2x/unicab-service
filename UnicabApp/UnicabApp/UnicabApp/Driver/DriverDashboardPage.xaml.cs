@@ -86,5 +86,19 @@ namespace UnicabApp.Driver
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
         }
+
+        private void AcceptCabFrameTapGesture_Tapped(object sender, EventArgs e)
+        {
+            DriverHomePage DvrHomePage = (DriverHomePage)App.Current.MainPage;
+            DvrHomePage.Detail = new NavigationPage(new AvailableCabRequestsPage());
+            DvrHomePage.IsPresented = false;
+        }
+
+        private void OfferCarpoolFrameTapGesture_Tapped(object sender, EventArgs e)
+        {
+            DriverHomePage DvrHomePage = (DriverHomePage)App.Current.MainPage;
+            DvrHomePage.Detail = new NavigationPage(new OfferCarpoolRidesPage());
+            DvrHomePage.IsPresented = false;
+        }
     }
 }

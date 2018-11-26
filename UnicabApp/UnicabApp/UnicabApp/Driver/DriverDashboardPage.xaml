@@ -14,6 +14,9 @@
                             <Frame Padding="5" OutlineColor="DimGray" WidthRequest="200" HeightRequest="100" >
                                 <!--<Image Source="car_icon.png" WidthRequest="60" HeightRequest="60" />-->
                                 <Label Text="Accept Cab Requests" LineBreakMode="WordWrap" FontSize="Large" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="AcceptCabFrameTapGesture" NumberOfTapsRequired="1" Tapped="AcceptCabFrameTapGesture_Tapped" />
+                                </Frame.GestureRecognizers>
                             </Frame>
                         </ContentView.Content>
                     </ContentView>
@@ -22,6 +25,9 @@
                             <Frame Padding="5" OutlineColor="DimGray" WidthRequest="200" HeightRequest="100" >
                                 <!--<Image Source="carpool_icon.png" WidthRequest="60" HeightRequest="60" />-->
                                 <Label Text="Offer Carpool" LineBreakMode="WordWrap" FontSize="Large" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="OfferCarpoolFrameTapGesture" NumberOfTapsRequired="1" Tapped="OfferCarpoolFrameTapGesture_Tapped" />
+                                </Frame.GestureRecognizers>
                             </Frame>
                         </ContentView.Content>
                     </ContentView>

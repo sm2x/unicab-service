@@ -69,8 +69,11 @@
                 <Label Text="Additional Notes" TextDecorations="Underline" Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="2" />
                 <Label x:Name="AdditionalNotesLabel" FontSize="Medium" Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="2" />
 
-                <Button x:Name="CallPassengerBtn" Text="Call Passenger" Grid.Row="16" Grid.Column="1" Clicked="CallPassengerBtn_Clicked" />
-                <Button x:Name="MessagePassengerBtn" Text="Message Passenger" Grid.Row="16" Grid.Column="2" Clicked="MessagePassengerBtn_Clicked" />
+                <Label Text="Rating / Feedback" TextDecorations="Underline" Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="2" />
+                <Label x:Name="RatingFeedbackLabel" FontSize="Medium" Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" />
+
+                <!--<Button x:Name="CallPassengerBtn" Text="Call Passenger" Grid.Row="16" Grid.Column="1" Clicked="CallPassengerBtn_Clicked" />
+                <Button x:Name="MessagePassengerBtn" Text="Message Passenger" Grid.Row="16" Grid.Column="2" Clicked="MessagePassengerBtn_Clicked" />-->
                 <!--<Button x:Name="BackBtn" Text="Back to Upcoming Rides" Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="2" Clicked="BackBtn_Clicked" />-->
             </Grid>
         </ScrollView>

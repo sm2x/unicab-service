@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UnicabApp.Driver.AvailableCabRequestsPage">
+             x:Class="UnicabApp.Driver.AvailableCabRequestsPage"
+             Title="Availble Cab Request">
   <ListView x:Name="CabRequestsListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
