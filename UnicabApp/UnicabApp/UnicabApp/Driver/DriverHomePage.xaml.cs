@@ -31,7 +31,11 @@ namespace UnicabApp.Driver
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
 
-            Detail = new NavigationPage(page);
+            Detail = new NavigationPage(page)
+            {
+                BarBackgroundColor = Color.Teal,
+                BarTextColor = Color.White
+            };
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;

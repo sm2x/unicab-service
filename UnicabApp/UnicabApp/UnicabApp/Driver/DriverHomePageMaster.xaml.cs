@@ -58,7 +58,10 @@ namespace UnicabApp.Driver
         private void ProfileTapper_Tapped(object sender, EventArgs e)
         {
             DriverHomePage DvrHomePage = (DriverHomePage)App.Current.MainPage;
-            DvrHomePage.Detail = new NavigationPage(new DriverProfilePage());
+            DvrHomePage.Detail = new NavigationPage(new DriverProfilePage()) {
+                BarBackgroundColor = Color.Teal,
+                BarTextColor = Color.White
+            };
             DvrHomePage.IsPresented = false;
 
         }

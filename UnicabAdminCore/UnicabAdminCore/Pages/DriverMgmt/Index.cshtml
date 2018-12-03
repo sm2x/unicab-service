@@ -45,15 +45,18 @@
                             </thead>
 
                             <tbody>
+                                @foreach (var item in Model.DriverApplicants)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.EmailAddress)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.MatricsNo)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.CarPlateNo)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.RoadTaxDueDate)</td>
+                                    </tr>
+                                }
 
-                                <tr>
-                                    <td>Razali Ismail</td>
-                                    <td>PKE 2790</td>
-                                    <td>Proton / Saga</td>
-                                    <td>Sedan</td>
-                                    <td>razaliismail@student.usm.my</td>
-                                    <td>23</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>

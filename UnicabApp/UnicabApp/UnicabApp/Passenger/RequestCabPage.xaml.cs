@@ -17,6 +17,87 @@ namespace UnicabApp.Passenger
 		public RequestCabPage ()
 		{
 			InitializeComponent ();
+
+            List<string> pickupLocationList = new List<string>
+            {
+                "RST Guard House, USM",
+                "M05 (belakang kafe), Desasiswa Tekun, USM",
+                "M05 (hadapan kafe), Desasiswa Tekun, USM",
+                "M04, Desasiswa Saujana, USM",
+                "M01 (parkir motor). Desasiswa Restu, USM",
+                "M03 (parkir motor), Desasiswa Saujana, USM",
+                "Kafe Restu / Saujana, USM",
+                "M02 (tingkat bawah), Desasiswa Restu, USM",
+                "M02 (tingkat atas), Desasiswa Restu, USM",
+                "Dewan Utama Desasiswa (DUD), USM",
+                "Kafe D'Tekun Bistro, Desasiswa Tekun, USM",
+                "M06 (Pondok), Desasiswa Tekun, USM",
+                "Hentian Bas Padang Kawad, USM",
+                "Hentian Bas Indah Kembara, USM",
+                "Hentian Bas Aman Damai, USM",
+                "Hentian Bas Jabatan Keselamatan (JK), USM",
+                "Hentian Bas Stor Kimia, USM",
+                "Hentian Bas Padang Bola Keranjang, Desasiswa Bakti Permai, USM",
+                "Hentian Bas Pusat Sejahtera, USM",
+                "Hentian Bas DK SK, USM",
+                "Hentian Bas SOLLAT, USM",
+                "Hentian Bas HBP, USM",
+                "Hentian Bas PHS II, USM",
+                "Hentian Bas Kompleks Eureka, USM",
+                "Hentian Bas Fajar Harapan, USM",
+                "Stadium Hoki / Pusat Sukan, USM",
+                "Padang Minden / Batu Uban, USM",
+                "Glugor",
+                "Sungai Dua",
+                "Terminal Bas Sungai Nibong",
+                "Lip Sin",
+                "Queensbay Mall",
+                "Kompleks Bukit Jambul",
+                "Penang International Airport",
+                "Hospital Pulau Pinang"
+            };
+
+            List<string> dropoffLocationList = new List<string>
+            {
+                "RST Guard House, USM",
+                "M05 (belakang kafe), Desasiswa Tekun, USM",
+                "M05 (hadapan kafe), Desasiswa Tekun, USM",
+                "M04, Desasiswa Saujana, USM",
+                "M01 (parkir motor). Desasiswa Restu, USM",
+                "M03 (parkir motor), Desasiswa Saujana, USM",
+                "Kafe Restu / Saujana, USM",
+                "M02 (tingkat bawah), Desasiswa Restu, USM",
+                "M02 (tingkat atas), Desasiswa Restu, USM",
+                "Dewan Utama Desasiswa (DUD), USM",
+                "Kafe D'Tekun Bistro, Desasiswa Tekun, USM",
+                "M06 (Pondok), Desasiswa Tekun, USM",
+                "Hentian Bas Padang Kawad, USM",
+                "Hentian Bas Indah Kembara, USM",
+                "Hentian Bas Aman Damai, USM",
+                "Hentian Bas Jabatan Keselamatan (JK), USM",
+                "Hentian Bas Stor Kimia, USM",
+                "Hentian Bas Padang Bola Keranjang, Desasiswa Bakti Permai, USM",
+                "Hentian Bas Pusat Sejahtera, USM",
+                "Hentian Bas DK SK, USM",
+                "Hentian Bas SOLLAT, USM",
+                "Hentian Bas HBP, USM",
+                "Hentian Bas PHS II, USM",
+                "Hentian Bas Kompleks Eureka, USM",
+                "Hentian Bas Fajar Harapan, USM",
+                "Stadium Hoki / Pusat Sukan, USM",
+                "Padang Minden / Batu Uban, USM",
+                "Glugor",
+                "Sungai Dua",
+                "Terminal Bas Sungai Nibong",
+                "Lip Sin",
+                "Queensbay Mall",
+                "Kompleks Bukit Jambul",
+                "Penang International Airport",
+                "Hospital Pulau Pinang"
+            };
+
+            PickupLocationPicker.ItemsSource = pickupLocationList;
+            DropoffLocationPicker.ItemsSource = dropoffLocationList;
 		}
 
         private async void BookCabBtn_Clicked(object sender, EventArgs e)

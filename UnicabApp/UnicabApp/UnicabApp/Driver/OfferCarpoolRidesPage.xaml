@@ -34,24 +34,10 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Driving From" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-                <Picker x:Name="DrivingFromPicker" Title="Select departing location" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>USM</x:String>
-                            <x:String>Outside</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <Picker x:Name="DrivingFromPicker" Title="Select departing location" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></Picker>
 
                 <Label Text="Driving To" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" />
-                <Picker x:Name="DrivingToPicker" Title="Select arrival location" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" >
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>USM</x:String>
-                            <x:String>Outside</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <Picker x:Name="DrivingToPicker" Title="Select arrival location" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" ></Picker>
 
                 <Label Text="Departing Date" Grid.Row="5" Grid.Column="1" />
                 <DatePicker x:Name="DepartingDatePicker" MinimumDate="{x:Static system:DateTime.Today}" Grid.Row="6" Grid.Column="1" />

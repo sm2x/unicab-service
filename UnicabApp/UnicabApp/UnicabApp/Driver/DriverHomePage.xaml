@@ -7,7 +7,7 @@
     <pages:DriverHomePageMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>
   <MasterDetailPage.Detail>
-    <NavigationPage>
+    <NavigationPage BarBackgroundColor="Teal" BarTextColor="White">
       <x:Arguments>
         <pages:DriverDashboardPage />
       </x:Arguments>

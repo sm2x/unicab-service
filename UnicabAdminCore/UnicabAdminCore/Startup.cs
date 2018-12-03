@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using UnicabAdminCore.Services;
 
 namespace UnicabAdminCore
 {
@@ -33,6 +34,8 @@ namespace UnicabAdminCore
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IDriverManagementService, DriverManagementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

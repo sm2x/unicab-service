@@ -6,7 +6,7 @@ namespace UnicabApp.Common
 {
     public static class AppServerConstants
     {
-        public static string AppServerUrl = "http://10.207.142.52";
+        public static string AppServerUrl = "http://10.207.202.119";
         public static int AppServerPort = 53940;
 
         public static string DriverApplicantsUrl = AppServerUrl + ":" + AppServerPort + "/api/DriverApplicants/{0}";
