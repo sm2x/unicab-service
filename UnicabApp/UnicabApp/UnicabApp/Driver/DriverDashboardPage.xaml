@@ -56,10 +56,10 @@
                                                         <Label Text="|" />
                                                         <Label Text="{Binding StringFormat='Time: {0:t}'}" />
                                                     </StackLayout>
-                                                    <StackLayout Orientation="Horizontal">
+                                                    <!--<StackLayout Orientation="Horizontal">
                                                         <Label Text="Status : " />
                                                         <Label Text="ON SCHEDULE" FontAttributes="Bold" TextColor="DarkGreen" />
-                                                    </StackLayout>
+                                                    </StackLayout>-->
                                                 </StackLayout>
 
                                             </StackLayout>

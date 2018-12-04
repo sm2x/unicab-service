@@ -37,7 +37,8 @@ namespace UnicabApp.Passenger
                     new PassengerHomePageMenuItem { Id = 1, Title = "Request Cab", TargetType = typeof(RequestCabPage) },
                     new PassengerHomePageMenuItem { Id = 2, Title = "Available Carpool", TargetType = typeof(AvailableCarpoolPage) },
                     new PassengerHomePageMenuItem { Id = 3, Title = "Browse Drivers", TargetType = typeof(BrowseDriversPage) },
-                    new PassengerHomePageMenuItem { Id = 4, Title = "History", TargetType = typeof(RideHistoryPage) },
+                    new PassengerHomePageMenuItem { Id = 4, Title = "Fare Table", TargetType = typeof(PassengerFareTablePage) },
+                    new PassengerHomePageMenuItem { Id = 5, Title = "History", TargetType = typeof(RideHistoryPage) },
 
                     new PassengerHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null }
                 });

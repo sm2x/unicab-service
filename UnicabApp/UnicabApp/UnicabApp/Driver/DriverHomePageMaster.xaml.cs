@@ -36,7 +36,8 @@ namespace UnicabApp.Driver
                     new DriverHomePageMenuItem { Id = 0, Title = "Home", TargetType = typeof(DriverDashboardPage) },
                     new DriverHomePageMenuItem { Id = 1, Title = "Available Cab Requests", TargetType = typeof(AvailableCabRequestsPage) },
                     new DriverHomePageMenuItem { Id = 2, Title = "Offer Carpool Rides", TargetType = typeof(OfferCarpoolRidesPage) },
-                    new DriverHomePageMenuItem { Id = 3, Title = "History", TargetType = typeof(DriverHistoryPage) },
+                    new DriverHomePageMenuItem { Id = 3, Title = "Fare Table", TargetType = typeof(DriverFareTablePage) },
+                    new DriverHomePageMenuItem { Id = 4, Title = "History", TargetType = typeof(DriverHistoryPage) },
 
                     new DriverHomePageMenuItem { Id = 99, Title = "Log Out", TargetType = null }
                 });
