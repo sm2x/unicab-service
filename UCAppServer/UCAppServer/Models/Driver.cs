@@ -5,25 +5,9 @@ using System.Threading.Tasks;
 
 namespace UCAppServer.Models
 {
-    public class DriverApplicant
+    public class Driver : User
     {
-        public int DriverApplicantId { get; set; }
-
-        public string EmailAddress { get; set; }
-
-        public string MatricsNo { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public string Password { get; set; }
-
-        public char Gender { get; set; }
-
-        public DateTime DateOfBirth { get; set; }
-
-        public byte[] MatricsCardPhoto { get; set; }
+        public string DriverPassword { get; set; }
 
         public byte[] DrivingLicensePhoto { get; set; }
 
@@ -40,8 +24,5 @@ namespace UCAppServer.Models
         public DateTime CarRoadTaxDueDate { get; set; }
 
         public byte[] CarInsuranceGrantPhoto { get; set; }
-
-        public DateTime ApplicationDateTime { get; set; }
-
     }
 }

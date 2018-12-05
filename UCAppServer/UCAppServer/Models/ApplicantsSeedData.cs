@@ -32,7 +32,7 @@ namespace UCAppServer.Models
                             LastName = "Ng",
                             Password = "qwertyuiop",
                             CarPlateNo = "BFE9720",
-                            RoadTaxDueDate = new DateTime(2019, 3, 30)
+                            CarRoadTaxDueDate = new DateTime(2019, 3, 30)
                         },
 
                         new DriverApplicant
@@ -43,7 +43,7 @@ namespace UCAppServer.Models
                             LastName = "Heng",
                             Password = "qwertyuiop",
                             CarPlateNo = "PET1234",
-                            RoadTaxDueDate = new DateTime(2019, 7, 31)
+                            CarRoadTaxDueDate = new DateTime(2019, 7, 31)
                         },
 
                         new DriverApplicant
@@ -54,7 +54,7 @@ namespace UCAppServer.Models
                             LastName = "Pang",
                             Password = "qwertyuiop",
                             CarPlateNo = "QTH2234",
-                            RoadTaxDueDate = new DateTime(2019, 6, 14)
+                            CarRoadTaxDueDate = new DateTime(2019, 6, 14)
                         },
 
                         new DriverApplicant
@@ -65,7 +65,7 @@ namespace UCAppServer.Models
                             LastName = "Chan",
                             Password = "qwertyuiop",
                             CarPlateNo = "CDE9720",
-                            RoadTaxDueDate = new DateTime(2019, 3, 21)
+                            CarRoadTaxDueDate = new DateTime(2019, 3, 21)
                         },
 
                         new DriverApplicant
@@ -76,7 +76,7 @@ namespace UCAppServer.Models
                             LastName = "Kong",
                             Password = "qwertyuiop",
                             CarPlateNo = "PDG6578",
-                            RoadTaxDueDate = new DateTime(2019, 2, 21)
+                            CarRoadTaxDueDate = new DateTime(2019, 2, 21)
                         },
 
                         new DriverApplicant
@@ -87,7 +87,7 @@ namespace UCAppServer.Models
                             LastName = "Ibrahim",
                             Password = "qwertyuiop",
                             CarPlateNo = "JDT1234",
-                            RoadTaxDueDate = new DateTime(2019, 8, 3)
+                            CarRoadTaxDueDate = new DateTime(2019, 8, 3)
                         },
 
                         new DriverApplicant
@@ -98,7 +98,7 @@ namespace UCAppServer.Models
                             LastName = "Karuni",
                             Password = "qwertyuiop",
                             CarPlateNo = "DFG5434",
-                            RoadTaxDueDate = new DateTime(2019, 10, 30)
+                            CarRoadTaxDueDate = new DateTime(2019, 10, 30)
                         },
 
                         new DriverApplicant
@@ -109,7 +109,7 @@ namespace UCAppServer.Models
                             LastName = "Khalid",
                             Password = "qwertyuiop",
                             CarPlateNo = "WDE1223",
-                            RoadTaxDueDate = new DateTime(2019, 4, 30)
+                            CarRoadTaxDueDate = new DateTime(2019, 4, 30)
                         },
 
                         new DriverApplicant
@@ -120,7 +120,7 @@ namespace UCAppServer.Models
                             LastName = "Hamid",
                             Password = "qwertyuiop",
                             CarPlateNo = "MDT6543",
-                            RoadTaxDueDate = new DateTime(2019, 3, 12)
+                            CarRoadTaxDueDate = new DateTime(2019, 3, 12)
                         },
 
                         new DriverApplicant
@@ -131,7 +131,7 @@ namespace UCAppServer.Models
                             LastName = "Karuppiah",
                             Password = "qwertyuiop",
                             CarPlateNo = "ACV3123",
-                            RoadTaxDueDate = new DateTime(2019, 5, 20)
+                            CarRoadTaxDueDate = new DateTime(2019, 5, 20)
                         }
 
                     );
