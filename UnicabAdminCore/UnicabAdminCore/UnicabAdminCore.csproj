@@ -17,4 +17,8 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\gentelella\vendors\datatables.net-select\" />
+  </ItemGroup>
+
 </Project>

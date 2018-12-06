@@ -12,15 +12,15 @@ namespace UnicabAdminCore.Services
     {
         Task<List<DriverApplicant>> GetDriverApplicantsList();
 
-        Task ViewDriverApplicant(int driverApplicantId);
+        Task<DriverApplicant> GetDriverApplicant(int driverApplicantId);
 
         Task ApproveDriverApplicant(int driverApplicantId);
 
         Task RejectDriverApplicant(int driverApplicantId);
 
-        Task GetApprovedDriversList();
+        Task<List<Driver>> GetApprovedDriversList();
 
-        Task ViewDriver(int driverId);
+        Task<Driver> ViewDriver(int driverId);
 
         Task SetInactiveDriver(int driverId);
 

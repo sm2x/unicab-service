@@ -13,6 +13,7 @@ namespace UnicabAdminCore.Services
         private readonly HttpClient client;
 
         public List<DriverApplicant> DriverApplicantsList { get; private set;}
+        public List<Driver> DriversList { get; private set; }
 
         public DriverManagementService()
         {
@@ -46,9 +47,27 @@ namespace UnicabAdminCore.Services
 
         }
 
-        public Task ViewDriverApplicant(int driverApplicantId)
+        public async Task<DriverApplicant> GetDriverApplicant(int driverApplicantId)
         {
-            throw new NotImplementedException();
+            DriverApplicant applicant = new DriverApplicant();
+
+            var uri = new Uri(string.Format(AppServerConstants.DriverApplicantsUrl, driverApplicantId));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    applicant = JsonConvert.DeserializeObject<DriverApplicant>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"ERROR: {0}", ex.Message);
+            }
+
+            return applicant;
         }
 
         public Task ApproveDriverApplicant(int driverApplicantId)
@@ -61,14 +80,50 @@ namespace UnicabAdminCore.Services
             throw new NotImplementedException();
         }
 
-        public Task GetApprovedDriversList()
+        public async Task<List<Driver>> GetApprovedDriversList()
         {
-            throw new NotImplementedException();
+            DriversList = new List<Driver>();
+
+            var uri = new Uri(string.Format(AppServerConstants.DriversUrl, string.Empty));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    DriversList = JsonConvert.DeserializeObject<List<Driver>>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"ERROR: {0}", ex.Message);
+            }
+
+            return DriversList;
         }
 
-        public Task ViewDriver(int driverId)
+        public async Task<Driver> ViewDriver(int driverId)
         {
-            throw new NotImplementedException();
+            Driver driver = new Driver();
+
+            var uri = new Uri(string.Format(AppServerConstants.DriversUrl, driverId));
+
+            try
+            {
+                var response = await client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    driver = JsonConvert.DeserializeObject<Driver>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"ERROR: {0}", ex.Message);
+            }
+
+            return driver;
         }
 
         public Task SetInactiveDriver(int driverId)

@@ -9,23 +9,19 @@ using UnicabAdminCore.Services;
 
 namespace UnicabAdminCore.Pages.DriverMgmt
 {
-    public class IndexModel : PageModel
+    public class ReviewDriverApplicantModel : PageModel
     {
-        public List<DriverApplicant> DriverApplicants { get; set; }
-        public List<Driver> Drivers { get; set; }
-
         private IDriverManagementService driverManagementService;
+        public DriverApplicant driverApplicant;
 
-        public IndexModel(IDriverManagementService service)
+        public ReviewDriverApplicantModel(IDriverManagementService service)
         {
             driverManagementService = service;
         }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(int id)
         {
-            DriverApplicants = await driverManagementService.GetDriverApplicantsList();
-
-            Drivers = await driverManagementService.GetApprovedDriversList();
+            driverApplicant = await driverManagementService.GetDriverApplicant(id);
         }
     }
 }
