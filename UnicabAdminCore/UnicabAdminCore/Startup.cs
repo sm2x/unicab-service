@@ -36,6 +36,7 @@ namespace UnicabAdminCore
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<IDriverManagementService, DriverManagementService>();
+            services.AddScoped<IPassengerManagementService, PassengerManagementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

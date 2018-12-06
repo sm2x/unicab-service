@@ -12,7 +12,7 @@ namespace UnicabAdminCore.Services
     {
         private readonly HttpClient client;
 
-        public List<DriverApplicant> DriverApplicantsList { get; private set;}
+        public List<DriverApplicant> DriverApplicantsList { get; private set; }
         public List<Driver> DriversList { get; private set; }
 
         public DriverManagementService()
