@@ -7,7 +7,7 @@ namespace UnicabAdminCore.Models
 {
     public class Passenger
     {
-        public int PassengerId { get; set; }
+        public int UserId { get; set; }
 
         public string Password { get; set; }
 

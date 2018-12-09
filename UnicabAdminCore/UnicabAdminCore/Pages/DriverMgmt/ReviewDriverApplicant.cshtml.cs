@@ -12,7 +12,9 @@ namespace UnicabAdminCore.Pages.DriverMgmt
     public class ReviewDriverApplicantModel : PageModel
     {
         private IDriverManagementService driverManagementService;
-        public DriverApplicant driverApplicant;
+
+        [BindProperty]
+        public DriverApplicant driverApplicant { get; set; }
 
         public ReviewDriverApplicantModel(IDriverManagementService service)
         {
@@ -22,6 +24,32 @@ namespace UnicabAdminCore.Pages.DriverMgmt
         public async Task OnGetAsync(int id)
         {
             driverApplicant = await driverManagementService.GetDriverApplicant(id);
+        }
+
+        public async Task<IActionResult> OnPostRejectDriverApplicantAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            if (driverApplicant != null)
+                await driverManagementService.RejectDriverApplicant(driverApplicant);
+
+            return RedirectToPage("/DriverMgmt/Index");
+        }
+
+        public async Task<IActionResult> OnPostApproveDriverApplicantAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            if (driverApplicant != null)
+                await driverManagementService.ApproveDriverApplicant(driverApplicant);
+
+            return RedirectToPage("/DriverMgmt/Index");
         }
     }
 }

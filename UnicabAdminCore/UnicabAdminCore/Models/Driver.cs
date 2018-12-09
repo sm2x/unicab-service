@@ -7,7 +7,7 @@ namespace UnicabAdminCore.Models
 {
     public class Driver
     {
-        public int DriverId { get; set; }
+        //public int UserId { get; set; }
 
         public string EmailAddress { get; set; }
 
